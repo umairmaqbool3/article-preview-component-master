@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <title>Frontend Mentor | Article preview component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="intro">
+      <div class="img__div">
+        <img src="images/drawers.jpg" alt="Drawer Image" />
+      </div>
+      <div class="all__text">
+        <h2>Shift the overall look and feel by adding these wonderful 
+        touches to furniture in your home</h2>
+
+        <p>Ever been in a room and felt like something was missing? Perhaps 
+        it felt slightly bare and uninviting. I’ve got some simple tips 
+        to help you make any room feel complete.</p>
+
+        <div class="bottom_bar">
+          <img src="images/avatar-michelle.jpg" class="profile_img" alt="profileImage"/>
+          <h4 style="align-self: center">Michelle Appleton</h4><br>
+          <span class="dob" style="align-self: center" >28 Jun 2020</span>
+          <div class="share_icon tooltips" id="clicker">
+            <i class="fas fa-share share_image"></i>
+            <span id="clicked">
+              <p id="share">SHARE</p> 
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-pinterest"></i>
+            </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Umair Maqbool</a>.
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+
+$('#clicker').click(function() {
+  $('#clicked').addClass('myClass');
+
+  if ( $("#clicked").css("visibility") === "hidden") {
+    $('#clicked').css({
+    'visibility':'visible'
+    });
+    $('#clicker').css({
+      'background-color':'#6D7E93'
+    });
+    $('.share_image').css({
+      'color':'white'
+    });
+  }
+  else {
+    $('#clicked').css({
+    'visibility':'hidden'
+    });
+    $('#clicker').css({
+      'background-color':'#EEF2FA'
+    });
+    $('.share_image').css({
+      'color':'#49556B'
+    });
+  }
+
+  // $('#clicked').css({
+  //   'visibility':'visible'
+  // });
+ 
+});
+  </script>
+</body>
+</html>
